@@ -1,6 +1,6 @@
 //删除Add_inter模块
 function Add_delete(){
-    $("#icon img").off().click(function(){
+    $("#icon #remove").off().click(function(){
         var del_this = $(this)
        if(confirm_show()){
            console.log("1");
@@ -26,12 +26,14 @@ function Add_li_add(){
     if(added_lis<=4)
     {
         //添加新li
-        let inter_li = $('<li><div id="icon"><img id="edit" src="img/编辑.png" alt=""><img id="remove demo" src="img/关闭.png" alt=""></div><h3>DEMO</h3><span>2020.08.21</span></li>')
+        let inter_li = $('<li><div id="icon"><img id="enter_page" src="img/进入2.png" alt=""><img id="remove" src="img/关闭.png" alt=""></div><h3 contenteditable="true">DEMO</h3><span>2020.08.21</span></li>')
         $("#Added_inter").append(inter_li)
         //绑定删除模块
         Add_delete()
         //绑定跳转页面模块
         page_change()
+        //绑定进入新页面模块
+        enter()
     }
     else{
         clearTimeout(timer_animate)
@@ -45,9 +47,10 @@ function Add_li_add(){
         },600)
     }  
 }
+page_change()
 //调出新页面
 function page_change(){
-    $("#Added_inter li").click(function(){
+    $(".right").click(function(){
         img_move()
         width_change()
         if(flag_right)
@@ -57,6 +60,17 @@ function page_change(){
             })
             flag_right = false
         }
-
     })
 }
+//record页面写完删除
+
+img_move()
+        width_change()
+        if(flag_right)
+        {
+            $(".right").stop().animate({
+                left:-250
+            })
+            flag_right = false
+        }
+

@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>F_page</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_record.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/style_login.css">
+    <link rel="stylesheet" href="css/play_music.css">
 </head>
 <body>
     <div class="confirm">
@@ -44,13 +47,14 @@
                 </ul>
             </div>
             <div class="user">
-                <img src="img/u=2805742471,2690746441&fm=26&fmt=auto&gp=0.webp" alt="" class="img-circle">
+                <div class="img"><img src="img/u=2805742471,2690746441&fm=26&fmt=auto&gp=0.webp" alt="" class="img-circle"></div>
                 <h3>Alexander Maximov</h3>
             </div>
         </div>
     </div>
     <div id="right" class="right">
-        <div class="change_page"><img src="img/向左.png" alt=""><img id="right" src="img/向左.png" alt=""></div>
+        <div class="dian"></div>
+        <div class="change_page"><img id="quit" src="img/向左.png" alt=""><img id="right" src="img/向左.png" alt=""></div>
         <div class="title"><h2>Untitled</h2></div>
         <div class="container">
             <div class="row">
@@ -66,14 +70,16 @@
             </div>
             <div class="row">
                 <div class="topic">
-                    <img style="width:18px;filter:brightness(0.01); position:relative;top:2px;left:-3px" src="img/三角1.png" alt="">
-                    <span>Add topic</span>
-                    <div class="topic2">
-                        <ul>
-                            <span>Add a question...</span>
-                            <li><p>Press'<span>Tab</span>' to add new level or '<span>Shift+Tab</span>' to return to the previous level</p></li>
-                        </ul>
-                    </div>
+                    <ul id="Topic_ul">
+                        <li id="Topic_li">
+                            <img id="topic_switch" src="img/三角1.png" alt="">
+                            <input id="topic_input" placeholder="First topic" type="text">
+                            <ul id="ques_ul">
+                                <li id="ques_li"><textarea placeholder="Add a question..." id="ques_text" name="" id="" cols="90" rows="1"></textarea><img id="delete_ques" src="img/关闭.png" alt=""></li>
+                                <li id="ques_li"><textarea placeholder="Press Enter to add new question or Press Shift+Enter to add new topic " id="ques_text" name="" id="" cols="90" rows="1"></textarea><img id="delete_ques" src="img/关闭.png" alt=""></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
                 
             </div>
@@ -87,7 +93,150 @@
                 </ul>
             </div>
         </div>
+        <!-- 录制页面 -->
+        <div class="record_container">
+            <div class="record_row">
+                <span id="timing">2020.08.21</span>
+                <h1 id="record_title">Untitled</h1>
+                <div class="resume_btn">
+                    <img src="img_record/录音2.png" alt="">
+                    <span>Resume recording</span>
+                </div>
+                <div class="nav">
+                    <img id="record_img" src="img_record/录音.png" alt="">
+                    <ul id="nav_ul">
+                        <li id="nav_li">iPhone(Alex)</li>
+                        <li id="nav_li">Laptop's mic</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="record_row">
+                <div class="record_left">
+                    <h2>Recording</h2>
+                    <span id="clock">00:00</span>
+                    <img id="play_btn" src="img_record/播放.png" alt="">
+                    <div class="time_axis">
+                        <img id="start_dot" src="img_record/点.png" alt="">
+                        <img id="end_dot" src="img_record/点.png" alt="">
+                    </div>
+                    <div class="time_axis_2"></div>
+                </div>
+                <div class="record_middle">
+                    <h2>Notes</h2>
+                    <ul id="notes_ul">
+                        <li id="notes_li"><textarea placeholder="Notes..." name="" id="notes_text" cols="65" rows="1"></textarea></li>
+                    </ul>
+                </div>
+                <div class="record_right">
+                    <h2>Questions</h2>
+                    <div class="ques_search">
+                        <img src="img_record/搜索.png" alt="">
+                        <input type="text">
+                    </div>
+                    <ul id="record_ques_ul">
+                        <li id="record_ques_li">
+                            <span>Q1.1</span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nisi voluptate ut? Rerum tenetur unde repudiandae asperiores corporis nesciunt voluptatum pariatur reiciendis! Fuga inventore vitae consequatur deserunt, reprehenderit quod ullam.</p>
+                        </li>
+                        <li id="record_ques_li">
+                            <span>Q1.2</span>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nisi voluptate ut? Rerum tenetur unde repudiandae asperiores corporis nesciunt voluptatum pariatur reiciendis! Fuga inventore vitae consequatur deserunt, reprehenderit quod ullam.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="record_row">
+                <div class="record_btn">
+                    <div class="record_before">
+                        <img src="img_record/录音2.png" alt="">
+                        <h2>Start recording</h2>
+                    </div>
+                    <div class="record_after">
+                        <img id="pauserecord" src="img_record/暂停2.png" alt="">
+                        <img id="stoprecord" src="img_record/停止.png" alt="">
+                        <span id="record_pause">Pause</span>
+                        <span id="record_stop">Stop</span>
+                    </div>
+                </div>
+                <div class='MusicPanel'>
+        
+                    <div class='PanelRight'>
+                    <!-- 上一首按钮 -->
+                    <!-- 进度条 -->
+                    <div class="Process">
+                        <div class="SongTime"><span id="cur_time">00:00</span> <span id="end_time">00:00</span></div>
+                        <div class="ProcessAll" ></div> 
+                        <div class="ProcessNow"></div>
+                    </div> 
+                    <div class="play_control">
+                        <div class='Prev'>
+                            <span class="iconfont prev"><img id="prev" src="img_player/下一首.png" alt=""></span>
+                        </div> 
+                     <!-- 播放/暂停 -->
+                        <div id='Play' class='Play'>
+                            <span class="iconfont play"><img src="img_record/播放2.png" alt=""></span>
+                        </div> 
+                    <!-- 下一首按钮 -->
+                        <div class='Next'>
+                            <span class="iconfont next"><img src="img_player/下一首.png" alt=""></span>
+                        </div> 
+                    <!-- 歌曲信息 -->
+                    </div>   
+                    </div> 
+                </div>
+            </div>
+        </div>
+         <!-- 登录界面 -->
+   <div class="login_container">
+    <div class="login_row">
+        <div class="head_img">
+            <img src="img/u=2805742471,2690746441&fm=26&fmt=auto&gp=0.webp" alt="" class="img-circle">
+        </div>
+        <div class="user_info">
+            <h2>Alexander Maximov</h2>
+            <a href=""><img src="img_login/退出.png" alt=""> <span>Log out</span></a>
+        </div>
     </div>
+    <div class="login_row">
+        <h2>Settings</h2>
+    </div>
+    <div class="login_row">
+        <div class="settings_container">
+            <div class="login_row">
+                <div class="photo">
+                    <h2>Photo</h2>
+                    <div class="upload_photo">
+                        <img src="img/u=2805742471,2690746441&fm=26&fmt=auto&gp=0.webp" alt="" class="img-circle">
+                    </div>
+                    <button>Upload photo</button>
+                </div>
+                <div class="personal_info">
+                    <h2>Personal_info</h2>
+                    <form action="">
+                        <div><span>First name</span><input id="First_name" value="Alexander" type="text"></div>
+                        <div><span>Last name</span><input id="Last_name" value="Maximov" type="text"></div>
+                    </form>
+                </div>
+            </div>
+            <div class="login_row">
+                <h2>Connected devices</h2>
+                <ul id="devices_ul">
+                    <li>
+                        <span>iPhone(Alex)</span>
+                        <span id="available">Available</span>
+                    </li>
+                    <li>
+                        <span>JBL TUNE110BT</span>
+                        <span id="restricted">Restricted</span>
+                    </li>
+                </ul>
+            </div>
+            
+            </div>
+    </div>
+</div>
+    </div>
+    <!-- 页面1的js -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/project_list.js"></script>
@@ -97,6 +246,16 @@
     <script src="js/Added_inter.js"></script>
     <script src="js/confirm.js"></script>
     <script src="js/topic.js"></script>
+    <!-- 页面2的js -->
+    <script src="record_js/play_btn.js"></script>
+    <script src="record_js/switch.js"></script>
+    <script src="record_js/enter.js"></script>
+    <script src="record_js/record_btn.js"></script>
+    <script src="record_js/Recording_axis.js"></script>
+    <script src="record_js/play_music.js"></script>
+    <script src="record_js/resume_btn.js"></script>
+    <!-- 登录页面的js -->
+    <script src="login_js/login_enter.js"></script>
     <script>
         $(window).resize(()=>{
             nav_change()
@@ -111,6 +270,19 @@
 
         nav_change()
         }
+        //实现textarea的高度自适应
+            document.querySelector('#notes_text').addEventListener('input', function () {
+            this.style.height = this.scrollHeight + 'px';
+            })
+        //实现用户名字的更改
+        function update_name(){
+            let name = $("#First_name").val()+" "+$("#Last_name").val()
+            $(".user_info h2").text(name)
+            $(".user h3").text(name)
+        }
+        $(".personal_info input").change(()=>{
+            update_name()
+        })
     </script>
 </body>
 </html>

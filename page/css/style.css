@@ -10,6 +10,8 @@
     height: 100%;
     /* border-radius: 0px 23px 23px 0px; */
     /* background-color: #1564BF; */
+    user-select: none;
+
 }
 .top{
     position: absolute;
@@ -34,6 +36,10 @@
     z-index: 20;
     position: absolute;
     height: 100%;
+}
+#Topic_li{
+    width: 1000px;
+    margin-top: 10px;
 }
 .project-list ul{
     position: absolute;
@@ -69,11 +75,26 @@
 }
 
 .user{
-    width: 300px;
-    height: 100px;
+    width: 320px;
+    height: 70px;
     position: absolute;
     left: 40px;
     bottom:10px;
+    padding: 5px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.user .img{
+    width: 70px;
+    border-radius: 50%;
+    float: left;
+    transition: all 0.1s;
+}
+.user .img:hover{
+    box-shadow: 0px 2px 5px 1px rgb(51, 51, 51);
+}
+.user .img:active{
+    box-shadow: 0px 2px 5px 1px rgb(116, 116, 116);
 }
 .user img{
     width: 70px;
@@ -135,6 +156,7 @@
     font-weight: 600;
     transition: all 0.3s;
     position: relative;
+    user-select: none;
 
 }
 .project-add ul li:hover{
@@ -159,12 +181,15 @@
     width: 100%;
 }
 
+
 .change_page{
     width: 100px;
     height: 50px;
     position: absolute;
     left: 380px;
     top: 10px;
+    user-select: none;
+
 }
 .right .title{
     position: absolute;
@@ -176,6 +201,7 @@
     height: 700px;
     position: absolute;
     margin: 100px 500px;
+    user-select:none;
 }
 .container .row
 {
@@ -201,11 +227,14 @@
 }
 .row:nth-child(3)
 {
-    height: 120px;
+    z-index: 40;
+    position: relative;
     width: 92%;
     border: 2px solid rgba(63, 63, 63, 0.3);
     border-radius: 5px;
-    padding: 15px 40px;
+    padding: 15px 40px 40px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 .topic span{
     font-size: 23px;
@@ -214,17 +243,66 @@
 .topic_img{
     transform: rotate(-90deg);
 }
-.topic2 ul{
+#Topic_li img{
+    width: 22px;
     position: relative;
-    top: 10px;
-    left: 60px;
+    top: 4px;
+    transition: all 0.2s;
 }
-.topic2 p{
-    font-size: 14px;
+#Topic_li>#topic_switch:hover{
+    filter: brightness(1.8);
 }
-.topic2 p span{
-    font-size: 14px;
-    font-weight: 700;
+#Topic_li>#delete_topic:hover{
+    filter: brightness(0.7);
+}
+#Topic_li>#delete_topic{
+    position: absolute;
+    left: 850px;
+}
+#ques_li{
+   float: left;
+}
+#ques_li img{
+    float: left;
+    left: 900px;
+    top: -26px;
+}
+#ques_li img:hover{
+    filter: brightness(0.6);
+}
+#Topic_li span{
+    color: rgb(61, 61, 61);
+    font-weight: 600;
+}
+#ques_ul{
+    position: relative;
+    left: 50px;
+    top: 20px;
+}
+#ques_ul #ques_text{
+    font-size: 20px;
+    font-weight: 600;
+    resize: none;
+    border: none;
+    outline: none;
+}
+#ques_text::placeholder{
+    color: rgb(160, 160, 160);
+    font-weight: 500;
+}
+
+#topic_input{
+    width: 700px;
+    font-size: 24px;
+    font-weight: 600;
+    color: rgb(51, 51, 51);
+    border: none;
+    outline: none;
+    position: relative;
+}
+
+#topic_input::placeholder{
+    color: black;
 }
 .row:nth-child(4){
     margin-top: 30px;
@@ -288,9 +366,11 @@
 .change_page img{
     width: 40px;
 }
+.change_page img:hover{
+    filter: brightness(1.4);
+}
 .change_page #right{
     transform: rotate(180deg);
-    filter: brightness(1.4);
 }
 #download:hover{
     color: rgb(167, 167, 167);
@@ -320,6 +400,34 @@
     top: 14px;
     width: 600px;
     outline: none;
+}
+
+#Add_topic{
+    border: none;
+    font-size: 24px;
+    position: relative;
+    top: 1px;
+    width: 600px;
+    outline: none;
+}
+#topic_text{
+    resize: none;
+    position: absolute;
+    top: -5px;
+    left: -40px;
+    font-size: 21px;
+    border: none;
+    outline: none;
+    font-weight: 500;
+}
+#topic_text::placeholder{
+    color: black;
+}
+#Add_topic::placeholder{
+    color: black;
+}
+#Add_input::placeholder{
+    color: black;
 }
 .confirm{
     display: none;
@@ -375,4 +483,36 @@
 }
 .confirm .row #confirm_no:hover{
     background-color: #768da8;
+}
+#Topic_ul{
+    position: relative;
+    top: 0px;
+    width: 100%;
+}
+#Topic_ul li{
+    margin-top: 5px;
+}
+/* 滚动条样式 */
+::-webkit-scrollbar {
+    width: 4px;    
+    /*height: 4px;*/
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: rgba(0,0,0,0.2);
+}
+
+#enter_page{
+    position: relative;
+    top: 120px;
+    left: 40px;
+}
+.dian{
+    width: 145px;
+    height:700px;
+    background-color: transparent;
+    position: absolute;
+    left: 350px;
+    top: 100px;
 }
