@@ -1,0 +1,173 @@
+.login_container{
+    width: 80%;
+    height: 730px;
+    position: absolute;
+    margin: 80px 400px;
+    z-index: 80;
+    display: none;
+    user-select: none;
+}
+.login_row
+{
+    width: 92%;
+    height: 100px;
+    padding: 10px 30px;
+    user-select: none;
+}
+.login_row:nth-child(1) .head_img img{
+    width: 100px;
+    border-radius: 50%;
+}
+.login_row:nth-child(1) .head_img{
+    float: left;
+    width: 110px;
+}
+.user_info{
+    float: left;
+    width: 60%;
+    height: 100px;
+    margin-left: 0px;
+}
+.user_info h2{
+    position: absolute;
+    margin: 20px 10px;
+}
+.user_info a{
+    position: absolute;
+    margin:60px 6px;
+    color: grey;
+}
+.user_info a:hover{
+    color: rgb(44, 44, 44);
+}
+.user_info a img{
+    position: relative;
+    width: 22px;
+    top: 6px;
+}
+.login_row:nth-child(2)
+{
+    height: 15px;
+    color: rgb(90, 112, 133);
+}
+.login_row:nth-child(3)
+{
+    height:75%;
+}    
+.login_row:nth-child(3)   .settings_container{
+    height:100%;
+    border: 2px solid rgb(124, 124, 124,0.25);
+}
+.settings_container .login_row{
+    width: 100%;
+    height: 250px;
+}
+.settings_container .login_row:nth-child(1){
+    width: 95%;
+    height: 200px;
+    border-bottom: 1px solid rgb(94, 93, 93,0.1);
+}
+.settings_container .login_row:nth-child(1) .photo
+{
+    float: left;
+    width: 20%;
+    height: 100%;
+}
+.photo h2{
+    font-size: 20px;
+    color: rgb(90, 112, 133);
+}
+.upload_photo{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.upload_photo img{
+    width: 80px;
+    border-radius: 50%;
+}
+.photo button{
+    position: relative;
+    top: 20px;
+    width: 140px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background-color: #1564BF;
+    border: none;
+    border-radius: 5px;
+}
+.photo button:hover{
+    background-color: #1f7de7;
+
+}
+.settings_container .login_row:nth-child(1) .personal_info
+{
+    float: left;
+    width: 60%;
+    height: 100%;
+}
+
+.personal_info h2{
+    color: rgb(90, 112, 133);
+    font-size: 20px;
+}
+.personal_info form{
+    height: 100px;
+}
+.personal_info form div{
+    height: 50px;
+    float: left;
+    margin-top: 20px;
+}
+.personal_info form div input{
+    float: left;
+    position: relative;
+    top: 20px;
+    left: -80px;
+    width: 500px;
+    font-size: 22px;
+}
+.personal_info form div span{
+    float: left;
+    color: grey;
+}
+.login_row:nth-child(2) h2
+{
+    font-size: 20px;
+}
+.login_row:nth-child(2) #devices_ul{
+    position: relative;
+    margin: 10px 0px;
+    width: 96%;
+    height: 250px;
+}
+.login_row:nth-child(2) #devices_ul li{
+    width: 240px;
+    height: 40%;
+    border:2px solid rgb(138, 138, 138,0.3);
+    border-radius: 2px;
+    float: left;
+    text-align: center;
+    font-weight: 600;
+    margin-right: 10px;
+    transition:  all 0.1s;
+}
+.login_row:nth-child(2) #devices_ul li:hover{
+    border:2px solid rgb(138, 138, 138,0.6);
+}
+.login_row:nth-child(2) #devices_ul li span{
+    font-size: 20px;
+    color: black;
+    margin: 20px;
+    position: relative;
+    top: 20px;
+}
+.login_row:nth-child(2) #devices_ul li #available{
+    color: rgb(5, 151, 13);
+    position: relative;
+}
+.login_row:nth-child(2) #devices_ul li #restricted{
+    color: red;
+}

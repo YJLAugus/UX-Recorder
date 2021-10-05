@@ -9,13 +9,10 @@ function confirm_show(){
 function confirm_hide(){
    $("#confirm_yes").off().click(function(){
         console.log("删除");
-        c_flag = true
     })
     $("#confirm_no").off().click(function(){
         console.log("取消");
-        c_flag = true
     })
     return true
-
 }
 

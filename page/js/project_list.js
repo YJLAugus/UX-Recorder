@@ -73,13 +73,11 @@ text_editable("#project_ul li span")
 
 $("#icon #edit").on({
     click:()=>{
-        console.log("可更改了");
         $("#Added_inter li h3").prop("contenteditable","true")
     }
 })
 $("#Added_inter li").on({
     focusout:()=>{
-        console.log("不可更改了");
         $("#Added_inter li h3").prop("contenteditable","false")
     }
 })
