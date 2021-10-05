@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>F_page</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style_record.css">
+    <title>UX-Recorder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename="css/style.css") }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename="css/style_record.css") }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="css/style_login.css">
-    <link rel="stylesheet" href="css/play_music.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename="css/style_login.css") }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename="css/play_music.css") }}">
 </head>
 <body>
     <div class="confirm">
@@ -47,14 +47,14 @@
                 </ul>
             </div>
             <div class="user">
-                <div class="img"><img src="img/u=2805742471,2690746441&fm=26&fmt=auto&gp=0.webp" alt="" class="img-circle"></div>
+                <div class="img"><img src="{{ url_for('static', filename="img/u=2805742471,2690746441&fm=26&fmt=auto&gp=0.webp" alt="" class="img-circle"></div>
                 <h3>Alexander Maximov</h3>
             </div>
         </div>
     </div>
     <div id="right" class="right">
         <div class="dian"></div>
-        <div class="change_page"><img id="quit" src="img/向左.png" alt=""><img id="right" src="img/向左.png" alt=""></div>
+        <div class="change_page"><img id="quit" src="{{ url_for('static', filename="img/向左.png") }}" alt=""><img id="right" src="{{ url_for('static', filename="img/向左.png") }}" alt=""></div>
         <div class="title"><h2>Untitled</h2></div>
         <div class="container">
             <div class="row">
@@ -72,11 +72,11 @@
                 <div class="topic">
                     <ul id="Topic_ul">
                         <li id="Topic_li">
-                            <img id="topic_switch" src="img/三角1.png" alt="">
+                            <img id="topic_switch" src="{{ url_for('static', filename="img/三角1.png") }}" alt="">
                             <input id="topic_input" placeholder="First topic" type="text">
                             <ul id="ques_ul">
-                                <li id="ques_li"><textarea placeholder="Add a question..." id="ques_text" name="" id="" cols="90" rows="1"></textarea><img id="delete_ques" src="img/关闭.png" alt=""></li>
-                                <li id="ques_li"><textarea placeholder="Press Enter to add new question or Press Shift+Enter to add new topic " id="ques_text" name="" id="" cols="90" rows="1"></textarea><img id="delete_ques" src="img/关闭.png" alt=""></li>
+                                <li id="ques_li"><textarea placeholder="Add a question..." id="ques_text" name="" id="" cols="90" rows="1"></textarea><img id="delete_ques" src="{{ url_for('static', filename="img/关闭.png") }}" alt=""></li>
+                                <li id="ques_li"><textarea placeholder="Press Enter to add new question or Press Shift+Enter to add new topic " id="ques_text" name="" id="" cols="90" rows="1"></textarea><img id="delete_ques" src="{{ url_for('static', filename="img/关闭.png") }}" alt=""></li>
                             </ul>
                         </li>
                     </ul>
@@ -103,7 +103,7 @@
                     <span>Resume recording</span>
                 </div>
                 <div class="nav">
-                    <img id="record_img" src="img_record/录音.png" alt="">
+                    <img id="record_img" src="{{ url_for('static', filename="img_record/录音.png") }}" alt="">
                     <ul id="nav_ul">
                         <li id="nav_li">iPhone(Alex)</li>
                         <li id="nav_li">Laptop's mic</li>
@@ -114,10 +114,10 @@
                 <div class="record_left">
                     <h2>Recording</h2>
                     <span id="clock">00:00</span>
-                    <img id="play_btn" src="img_record/播放.png" alt="">
+                    <img id="play_btn" src="{{ url_for('static', filename="img_record/播放.png") }}" alt="">
                     <div class="time_axis">
-                        <img id="start_dot" src="img_record/点.png" alt="">
-                        <img id="end_dot" src="img_record/点.png" alt="">
+                        <img id="start_dot" src="{{ url_for('static', filename="img_record/点.png") }}" alt="">
+                        <img id="end_dot" src="{{ url_for('static', filename="img_record/点.png") }}" alt="">
                     </div>
                     <div class="time_axis_2"></div>
                 </div>
@@ -130,7 +130,7 @@
                 <div class="record_right">
                     <h2>Questions</h2>
                     <div class="ques_search">
-                        <img src="img_record/搜索.png" alt="">
+                        <img src="{{ url_for('static', filename="img_record/搜索.png") }}"  alt="">
                         <input type="text">
                     </div>
                     <ul id="record_ques_ul">
@@ -148,12 +148,12 @@
             <div class="record_row">
                 <div class="record_btn">
                     <div class="record_before">
-                        <img src="img_record/录音2.png" alt="">
+                        <img src="{{ url_for('static', filename="img_record/录音2.png") }}" alt="">
                         <h2>Start recording</h2>
                     </div>
                     <div class="record_after">
-                        <img id="pauserecord" src="img_record/暂停2.png" alt="">
-                        <img id="stoprecord" src="img_record/停止.png" alt="">
+                        <img id="pauserecord" src="{{ url_for('static', filename="img_record/暂停2.png") }}" alt="">
+                        <img id="stoprecord" src="{{ url_for('static', filename="img_record/停止.png") }}" alt="">
                         <span id="record_pause">Pause</span>
                         <span id="record_stop">Stop</span>
                     </div>
@@ -170,15 +170,15 @@
                     </div> 
                     <div class="play_control">
                         <div class='Prev'>
-                            <span class="iconfont prev"><img id="prev" src="img_player/下一首.png" alt=""></span>
+                            <span class="iconfont prev"><img id="prev" src="{{ url_for('static', filename="img_player/下一首.png") }}" alt=""></span>
                         </div> 
                      <!-- 播放/暂停 -->
                         <div id='Play' class='Play'>
-                            <span class="iconfont play"><img src="img_record/播放2.png" alt=""></span>
+                            <span class="iconfont play"><img src="{{ url_for('static', filename="img_record/播放2.png") }}" alt=""></span>
                         </div> 
                     <!-- 下一首按钮 -->
                         <div class='Next'>
-                            <span class="iconfont next"><img src="img_player/下一首.png" alt=""></span>
+                            <span class="iconfont next"><img src="{{ url_for('static', filename="img_player/下一首.png") }}" alt=""></span>
                         </div> 
                     <!-- 歌曲信息 -->
                     </div>   
@@ -190,11 +190,11 @@
    <div class="login_container">
     <div class="login_row">
         <div class="head_img">
-            <img src="img/u=2805742471,2690746441&fm=26&fmt=auto&gp=0.webp" alt="" class="img-circle">
+            <img src="{{ url_for('static', filename="img/u=2805742471,2690746441&fm=26&fmt=auto&gp=0.webp") }}" alt="" class="img-circle">
         </div>
         <div class="user_info">
             <h2>Alexander Maximov</h2>
-            <a href=""><img src="img_login/退出.png" alt=""> <span>Log out</span></a>
+            <a href=""><img src="{{ url_for('static', filename="img_login/退出.png") }}" alt=""> <span>Log out</span></a>
         </div>
     </div>
     <div class="login_row">
@@ -206,7 +206,7 @@
                 <div class="photo">
                     <h2>Photo</h2>
                     <div class="upload_photo">
-                        <img src="img/u=2805742471,2690746441&fm=26&fmt=auto&gp=0.webp" alt="" class="img-circle">
+                        <img src="{{ url_for('static', filename="img/u=2805742471,2690746441&fm=26&fmt=auto&gp=0.webp") }}" alt="" class="img-circle">
                     </div>
                     <button>Upload photo</button>
                 </div>
@@ -237,25 +237,25 @@
 </div>
     </div>
     <!-- 页面1的js -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/project_list.js"></script>
-    <script src="js/right_page.js"></script>
-    <script src="js/descript.js"></script>
-    <script src="js/page_size.js"></script>
-    <script src="js/Added_inter.js"></script>
-    <script src="js/confirm.js"></script>
-    <script src="js/topic.js"></script>
+    <script src="{{ url_for('static', filename="js/jquery.min.js") }}"></script>
+    <script src="{{ url_for('static', filename="js/bootstrap.min.js") }}"></script>
+    <script src="{{ url_for('static', filename="js/project_list.js") }}"></script>
+    <script src="{{ url_for('static', filename="js/right_page.js") }}"></script>
+    <script src="{{ url_for('static', filename="js/descript.js") }}"></script>
+    <script src="{{ url_for('static', filename="js/page_size.js") }}"></script>
+    <script src="{{ url_for('static', filename="js/Added_inter.js") }}"></script>
+    <script src="{{ url_for('static', filename="js/confirm.js") }}"></script>
+    <script src="{{ url_for('static', filename="js/topic.js") }}"></script>
     <!-- 页面2的js -->
-    <script src="record_js/play_btn.js"></script>
-    <script src="record_js/switch.js"></script>
-    <script src="record_js/enter.js"></script>
-    <script src="record_js/record_btn.js"></script>
-    <script src="record_js/Recording_axis.js"></script>
-    <script src="record_js/play_music.js"></script>
-    <script src="record_js/resume_btn.js"></script>
+    <script src="{{ url_for('static', filename="record_js/play_btn.js") }}"></script>
+    <script src="{{ url_for('static', filename="record_js/switch.js") }}"></script>
+    <script src="{{ url_for('static', filename="record_js/enter.js") }}"></script>
+    <script src="{{ url_for('static', filename="record_js/record_btn.js") }}"></script>
+    <script src="{{ url_for('static', filename="record_js/Recording_axis.js") }}"></script>
+    <script src="{{ url_for('static', filename="record_js/play_music.js") }}"></script>
+    <script src="{{ url_for('static', filename="record_js/resume_btn.js") }}"></script>
     <!-- 登录页面的js -->
-    <script src="login_js/login_enter.js"></script>
+    <script src="{{ url_for('static', filename="login_js/login_enter.js") }}"></script>
     <script>
         $(window).resize(()=>{
             nav_change()
