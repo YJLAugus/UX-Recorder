@@ -14,7 +14,7 @@
 <body>
     <div class="confirm">
         <div class="row">
-            <img width="30px" src="img/感叹号.png" alt="">
+            <img width="30px" src="{{ url_for('static', filename="img/感叹号.png") }}" alt="">
             <span>Are you sure you want to delete this interview?</span>
         </div>
         <div class="row">
@@ -43,11 +43,11 @@
             <!-- animate__animated animate__shakeX -->
             <div class="project-add">
                 <ul>
-                    <li style="margin-top: 10px;"><span>+ Add project </span><img id="Add-img" style="width: 20px; filter: brightness(1.2); position: relative; top: 22px;display: none;" src="img/加号,收起,添加.png"  alt=""></li>
+                    <li style="margin-top: 10px;"><span>+ Add project </span><img id="Add-img" style="width: 20px; filter: brightness(1.2); position: relative; top: 22px;display: none;" src="{{ url_for('static', filename="img/加号,收起,添加.png") }}"  alt=""></li>
                 </ul>
             </div>
             <div class="user">
-                <div class="img"><img src="{{ url_for('static', filename="img/u=2805742471,2690746441&fm=26&fmt=auto&gp=0.webp" alt="" class="img-circle"></div>
+                <div class="img"><img src="{{ url_for('static', filename="img/u=2805742471,2690746441&fm=26&fmt=auto&gp=0.webp") }}" alt="" class="img-circle"></div>
                 <h3>Alexander Maximov</h3>
             </div>
         </div>
@@ -63,7 +63,7 @@
                     <h1>Untitled</h1>
                 </div>
                 <input id="descrip_input" style="display: none;" type="text" placeholder="Add a description">
-                <a id="download" href=""><img style="width: 30px; position: relative; left: -5px; top: 4px;" src="img/218下载、导入.png" alt=""><span>Export project</span></a>
+                <a id="download" href=""><img style="width: 30px; position: relative; left: -5px; top: 4px;" src="{{ url_for('static', filename="img/218下载、导入.png") }}" alt=""><span>Export project</span></a>
             </div>
             <div class="row">
                 <h2>Interview plan</h2>
@@ -99,7 +99,7 @@
                 <span id="timing">2020.08.21</span>
                 <h1 id="record_title">Untitled</h1>
                 <div class="resume_btn">
-                    <img src="img_record/录音2.png" alt="">
+                    <img src="{{ url_for('static', filename="img_record/录音2.png") }}" alt="">
                     <span>Resume recording</span>
                 </div>
                 <div class="nav">
